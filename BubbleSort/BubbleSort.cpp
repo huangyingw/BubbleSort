@@ -42,9 +42,9 @@ void BubbleSort(SeqList R)
 void input_int(SeqList R) 
 {  
     int i;
-    cout<<"请输入数据个数"<<endl;
+    cout<<"Please input count"<<endl;
 	cin>>n;
-	cout<<"请依次输入"<<n<<"个数据"<<endl;
+	cout<<"Please input "<<n<<", data"<<endl;
     for(i=1;i<=n;i++)
 		cin>>R[i].key;
 }
