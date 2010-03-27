@@ -1,4 +1,4 @@
-// BubbleSort.cpp : 定义控制台应用程序的入口点。
+// BubbleSort.cpp :
 #include "stdafx.h"
 #include"stdio.h"
 #include"stdlib.h"
@@ -6,17 +6,17 @@
 
 using namespace std;
 
-#define Max 100         //假设文件长度
+#define Max 100    
 
 typedef struct
-{         //定义记录类型
-    int key;            //关键字项
+{         
+    int key;
 }RecType;
 
-typedef RecType SeqList[Max+1]; //SeqList为顺序表，表中第0个元素作为哨兵
-int n;                 //顺序表实际的长度
+typedef RecType SeqList[Max+1];
+int n;
 int count=0;
-typedef enum{FALSE,TRUE} Boolean;  //FALSE为0，TRUE为1
+typedef enum{FALSE,TRUE} Boolean;
 
 void BubbleSort(SeqList R) 
 {
@@ -62,9 +62,9 @@ void main()
     SeqList R;
 
 	n=5;
-	R[1].key=3;
+	R[1].key=1;
 	R[2].key=2;
-	R[3].key=1;
+	R[3].key=3;
 	R[4].key=4;
 	R[5].key=5;
 
