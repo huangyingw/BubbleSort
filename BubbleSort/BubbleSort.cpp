@@ -3,8 +3,10 @@
 #include"stdio.h"
 #include"stdlib.h"
 #include<iostream>
+#include <fstream>
 
 using namespace std;
+
 
 #define Max 100    
 
@@ -58,8 +60,8 @@ void output_int(SeqList R)
 
 void main() 
 {
-    int i;
-    SeqList R;
+  int i;
+  SeqList R;
 
 	n=5;
 	R[1].key=1;
@@ -71,5 +73,5 @@ void main()
 	BubbleSort(R);
 	cout<<"count number:"<<count<<endl;
 	cout<<"Sort reult:"<<endl;
-    output_int(R);
+  output_int(R);
 }
