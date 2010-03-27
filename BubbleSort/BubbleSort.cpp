@@ -9,6 +9,7 @@ using namespace std;
 
 
 #define Max 100    
+ofstream fout; 
 
 typedef struct
 {         
@@ -27,6 +28,7 @@ void BubbleSort(SeqList R)
 	{
 		for(j=n;j>i;j--)
 		{
+			fout<<"i->"<<i<<",j->"<<j<<endl;
 			count++;
 			if(R[j-1].key>R[j].key)
 			{
@@ -43,35 +45,37 @@ void BubbleSort(SeqList R)
 
 void input_int(SeqList R) 
 {  
-    int i;
-    cout<<"Please input count"<<endl;
+  int i;
+  fout<<"Please input count"<<endl;
 	cin>>n;
-	cout<<"Please input "<<n<<", data"<<endl;
-    for(i=1;i<=n;i++)
-		cin>>R[i].key;
+	fout<<"Please input "<<n<<", data"<<endl;
+  for(i=1;i<=n;i++)
+	cin>>R[i].key;
 }
 
 void output_int(SeqList R) 
 {
-    int i;
-    for(i=1;i<=n;i++)
-		cout<<R[i].key<<endl;
+  int i;
+  for(i=1;i<=n;i++)
+  	fout<<R[i].key<<endl;
 }
 
 void main() 
 {
+	fout.open("output.txt");
   int i;
   SeqList R;
 
 	n=5;
-	R[1].key=1;
-	R[2].key=2;
-	R[3].key=3;
+	R[1].key=3;
+	R[2].key=5;
+	R[3].key=1;
 	R[4].key=4;
-	R[5].key=5;
+	R[5].key=2;
 
 	BubbleSort(R);
-	cout<<"count number:"<<count<<endl;
-	cout<<"Sort reult:"<<endl;
+	fout<<"count number:"<<count<<endl;
+	fout<<"Sort reult:"<<endl;
   output_int(R);
+  fout.close();
 }
