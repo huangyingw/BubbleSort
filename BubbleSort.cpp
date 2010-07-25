@@ -1,5 +1,3 @@
-// BubbleSort.cpp : 定义控制台应用程序的入口点。
-#include "stdafx.h"
 #include"stdio.h"
 #include"stdlib.h"
 #include<iostream>
@@ -56,20 +54,21 @@ void output_int(SeqList R)
 		cout<<R[i].key<<endl;
 }
 
-void main() 
+int main() 
 {
-    int i;
-    SeqList R;
+  int i;
+  SeqList R;
 
 	n=5;
-	R[1].key=3;
+	R[1].key=1;
 	R[2].key=2;
-	R[3].key=1;
+	R[3].key=3;
 	R[4].key=4;
 	R[5].key=5;
 
 	BubbleSort(R);
 	cout<<"count number:"<<count<<endl;
 	cout<<"Sort reult:"<<endl;
-    output_int(R);
+  output_int(R);
+  return 0;
 }
