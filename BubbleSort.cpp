@@ -62,9 +62,9 @@ void main()
     SeqList R;
 
 	n=5;
-	R[1].key=1;
+	R[1].key=3;
 	R[2].key=2;
-	R[3].key=3;
+	R[3].key=1;
 	R[4].key=4;
 	R[5].key=5;
 
