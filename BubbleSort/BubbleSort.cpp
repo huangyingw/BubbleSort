@@ -33,6 +33,7 @@ void BubbleSort(SeqList R)
 			if(R[j-1].key>R[j].key)
 			{
 				exchange=1;
+
 				R[0]=R[j];
 				R[j]=R[j-1];
 				R[j-1]=R[0];
