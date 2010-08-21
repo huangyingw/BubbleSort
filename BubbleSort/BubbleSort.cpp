@@ -34,6 +34,7 @@ void BubbleSort(SeqList R)
 			{
 				exchange=1;
 
+				
 				R[0]=R[j];
 				R[j]=R[j-1];
 				R[j-1]=R[0];
