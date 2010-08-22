@@ -24,9 +24,9 @@ typedef enum{FALSE,TRUE} Boolean;
 void BubbleSort(SeqList R) 
 {
 	int i,j,exchange=0;
-	for(i=1;i<n;i++)
+	for(i=n;i>0;i--)
 	{
-		for(j=n;j>i;j--)
+		for(j=0;j<=i;j++)
 		{
 			fout<<"i->"<<i<<",j->"<<j<<endl;
 			count++;
