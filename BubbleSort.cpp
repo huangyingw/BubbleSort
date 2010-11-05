@@ -52,9 +52,9 @@ int main()
   n=5;
   R[1].key=1;
   R[2].key=2;
-  R[3].key=3;
+  R[3].key=5;
   R[4].key=4;
-  R[5].key=5;
+  R[5].key=3;
 
   BubbleSort(R);
   cout<<"count number:"<<count<<endl;
