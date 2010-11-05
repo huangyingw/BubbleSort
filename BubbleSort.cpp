@@ -8,7 +8,7 @@ using namespace std;
 
 typedef struct
 {         //定义记录类型
-    int key;            //关键字项
+  int key;            //关键字项
 }RecType;
 
 typedef RecType SeqList[Max+1]; //SeqList为顺序表，表中第0个元素作为哨兵
@@ -18,40 +18,30 @@ typedef enum{FALSE,TRUE} Boolean;  //FALSE为0，TRUE为1
 
 void BubbleSort(SeqList R) 
 {
-	int i,j,exchange=0;
-	for(i=1;i<n;i++)
-	{
-		for(j=n;j>i;j--)
-		{
-			count++;
-			if(R[j-1].key>R[j].key)
-			{
-				exchange=1;
-				R[j-1].key^=R[j].key;
-				R[j].key^=R[j-1].key;
-				R[j-1].key^=R[j].key;
-			}
-		}
-		if(exchange==0)
-			break;
-	}
-}
-
-void input_int(SeqList R) 
-{  
-    int i;
-    cout<<"请输入数据个数"<<endl;
-	cin>>n;
-	cout<<"请依次输入"<<n<<"个数据"<<endl;
-    for(i=1;i<=n;i++)
-		cin>>R[i].key;
+  int i,j,exchange=0;
+  for(i=1;i<n;i++)
+  {
+    for(j=n;j>i;j--)
+    {
+      count++;
+      if(R[j-1].key>R[j].key)
+      {
+        exchange=1;
+        R[j-1].key^=R[j].key;
+        R[j].key^=R[j-1].key;
+        R[j-1].key^=R[j].key;
+      }
+    }
+    if(exchange==0)
+      break;
+  }
 }
 
 void output_int(SeqList R) 
 {
-    int i;
-    for(i=1;i<=n;i++)
-		cout<<R[i].key<<endl;
+  int i;
+  for(i=1;i<=n;i++)
+    cout<<R[i].key<<endl;
 }
 
 int main() 
@@ -59,16 +49,16 @@ int main()
   int i;
   SeqList R;
 
-	n=5;
-	R[1].key=1;
-	R[2].key=2;
-	R[3].key=3;
-	R[4].key=4;
-	R[5].key=5;
+  n=5;
+  R[1].key=1;
+  R[2].key=2;
+  R[3].key=3;
+  R[4].key=4;
+  R[5].key=5;
 
-	BubbleSort(R);
-	cout<<"count number:"<<count<<endl;
-	cout<<"Sort reult:"<<endl;
+  BubbleSort(R);
+  cout<<"count number:"<<count<<endl;
+  cout<<"Sort reult:"<<endl;
   output_int(R);
   return 0;
 }
