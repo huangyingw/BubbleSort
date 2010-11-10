@@ -1,6 +1,3 @@
-run : BubbleSort.o
-	g++ -o run BubbleSort.o
-BubbleSort.o : BubbleSort.cpp
-	g++ -c BubbleSort.cpp
-clean :
-	rm run BubbleSort.o
+OBJECTS = BubbleSort.exe
+include ../../GNU_makefile_template
+LOCFLAGS = -I../bubbleSort
