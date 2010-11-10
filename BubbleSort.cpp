@@ -14,7 +14,6 @@ typedef struct
 typedef RecType SeqList[Max+1]; //SeqList为顺序表，表中第0个元素作为哨兵
 int n;                 //顺序表实际的长度
 int count=0;
-typedef enum{FALSE,TRUE} Boolean;  //FALSE为0，TRUE为1
 
 void BubbleSort(SeqList R) 
 {
