@@ -1,2 +1,2 @@
 make -B \
-&& ./BubbleSort.exe
+&& ./bubbleSort.exe
