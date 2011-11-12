@@ -15,20 +15,20 @@ typedef RecType SeqList[Max+1]; //SeqList为顺序表，表中第0个元素作为哨兵
 int n;                 //顺序表实际的长度
 int count=0;
 
-void BubbleSort(SeqList R) 
+void BubbleSort(int *R, int len) 
 {
   int i,j,exchange=0;
-  for(i=1;i<n;i++)
+  for(i=len;i>1;--i)
   {
-    for(j=n;j>i;j--)
+    for(j=1;j<i;--j)
     {
       count++;
-      if(R[j-1].key>R[j].key)
+      if(R[j-1]>R[j])
       {
         exchange=1;
-        R[j-1].key^=R[j].key;
-        R[j].key^=R[j-1].key;
-        R[j-1].key^=R[j].key;
+        R[j-1]^=R[j];
+        R[j]^=R[j-1];
+        R[j-1]^=R[j];
       }
     }
     if(exchange==0)
@@ -36,28 +36,27 @@ void BubbleSort(SeqList R)
   }
 }
 
-void output_int(SeqList R) 
+void output_int(int *R,int len) 
 {
   int i;
-  for(i=1;i<=n;i++)
-    cout<<R[i].key<<endl;
+  for(i=0;i<len;++i)
+    cout<<R[i]<<endl;
 }
 
 int main() 
 {
   int i;
-  SeqList R;
+  int *R=new int[5];
 
-  n=5;
-  R[1].key=1;
-  R[2].key=2;
-  R[3].key=5;
-  R[4].key=4;
-  R[5].key=3;
+  R[1]=1;
+  R[2]=2;
+  R[3]=5;
+  R[4]=4;
+  R[0]=3;
 
-  BubbleSort(R);
+  BubbleSort(R,5);
   cout<<"count number:"<<count<<endl;
   cout<<"Sort reult:"<<endl;
-  output_int(R);
+  output_int(R,5);
   return 0;
 }
