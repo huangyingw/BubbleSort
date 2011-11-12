@@ -20,7 +20,7 @@ void BubbleSort(int *R, int len)
   int i,j,exchange=0;
   for(i=len;i>1;--i)
   {
-    for(j=1;j<i;--j)
+    for(j=1;j<i;++j)
     {
       count++;
       if(R[j-1]>R[j])
