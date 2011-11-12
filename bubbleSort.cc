@@ -36,13 +36,11 @@ int main()
 {
   int i;
   int *R=new int[5];
-
   R[1]=1;
   R[2]=2;
   R[3]=5;
   R[4]=4;
   R[0]=3;
-
   BubbleSort(R,5);
   cout<<"count number:"<<count<<endl;
   cout<<"Sort reult:"<<endl;
