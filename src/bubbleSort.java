@@ -63,8 +63,8 @@ public class bubbleSort {
 	void sort() {
 		len = R.length;
 		int i, j, exchange = 0;
-		for (i = len; i > 1; i--) {
-			for (j = 0; j < i - 1; j++) {
+		for (i = len - 1; i > 0; i--) {
+			for (j = 0; j < i; j++) {
 				if (R[j] > R[j + 1]) {
 					count++;
 					exchange = 1;
