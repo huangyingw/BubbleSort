@@ -3,7 +3,7 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="bubbleSort">
+              as the first entry and export the buildfile again. --><project basedir="." default="bubbleSortTest" name="bubbleSort">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../../../../../../usr/lib/eclipse"/>
     <property name="junit.output.dir" value="junit"/>
@@ -58,9 +58,9 @@
             <classpath refid="bubbleSort.classpath"/>
         </java>
     </target>
-    <target name="bubbleSortTest">
+    <target depends="bubbleSort" name="bubbleSortTest">
         <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
+        <junit haltonfailure="yes" fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="bubbleSortTest" todir="${junit.output.dir}"/>
             <classpath refid="bubbleSort.classpath"/>

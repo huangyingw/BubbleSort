@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="laptop" name="bubbleSortTest" tests="1" time="0.089" timestamp="2013-07-15T00:29:09">
+<testsuite errors="0" failures="1" hostname="laptop" name="bubbleSortTest" tests="1" time="0.068" timestamp="2013-07-15T00:55:58">
   <properties>
     <property name="env.DESKTOP_SESSION" value="gnome" />
     <property name="file.encoding.pkg" value="sun.io" />
@@ -48,9 +48,9 @@
     <property name="path.separator" value=":" />
     <property name="file.encoding" value="UTF-8" />
     <property name="ant.file.type.bubbleSort" value="file" />
-    <property name="ant.project.default-target" value="build" />
+    <property name="ant.project.default-target" value="bubbleSortTest" />
     <property name="env.HOME" value="/home/huangyingw" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner bubbleSortTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/media/volgrp/myproject/git/java/algorithm/simple/bubbleSort/junit/TEST-bubbleSortTest.xml crashfile=/media/volgrp/myproject/git/java/algorithm/simple/bubbleSort/junitvmwatcher7416277719815786613.properties propsfile=/media/volgrp/myproject/git/java/algorithm/simple/bubbleSort/junit6030128604506646447.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner bubbleSortTest filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/media/volgrp/myproject/git/java/algorithm/simple/bubbleSort/junit/TEST-bubbleSortTest.xml crashfile=/media/volgrp/myproject/git/java/algorithm/simple/bubbleSort/junitvmwatcher5796029303564235860.properties propsfile=/media/volgrp/myproject/git/java/algorithm/simple/bubbleSort/junit3878815389090088181.properties" />
     <property name="env.SERVICE_TENANT_NAME" value="service" />
     <property name="ant.file" value="/media/volgrp/myproject/git/java/algorithm/simple/bubbleSort/build.xml" />
     <property name="env.LC_TELEPHONE" value="en_US.UTF-8" />
@@ -154,7 +154,7 @@
     <property name="sun.arch.data.model" value="64" />
     <property name="env.GNOME_DESKTOP_SESSION_ID" value="this-is-deprecated" />
   </properties>
-  <testcase classname="bubbleSortTest" name="test" time="0.008">
+  <testcase classname="bubbleSortTest" name="test" time="0.007">
     <failure message="Not yet implemented" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Not yet implemented
 	at bubbleSortTest.test(bubbleSortTest.java:10)
 </failure>
