@@ -58,7 +58,7 @@
             <classpath refid="bubbleSort.classpath"/>
         </java>
     </target>
-    <target depends="bubbleSort" name="bubbleSortTest">
+    <target depends="build" name="bubbleSortTest">
         <mkdir dir="${junit.output.dir}"/>
         <junit haltonfailure="yes" fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
