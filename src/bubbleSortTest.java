@@ -15,8 +15,6 @@ public class bubbleSortTest {
 
 		BubbleSort b = new BubbleSort(data);
 		b.sort();
-		System.out.println(expect.toString());
-		System.out.println(b.getData().toString());
 		assertTrue(Arrays.equals(b.getData(), expect));
 	}
 }
