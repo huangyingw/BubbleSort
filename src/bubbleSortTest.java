@@ -10,10 +10,14 @@ public class bubbleSortTest {
 	public void test() {
 
 		int[] expect = new int[] { 1, 2, 3, 4, 5 };
-
 		int[] data = new int[] { 5, 4, 3, 2, 1 };
-
 		BubbleSort b = new BubbleSort(data);
+		b.sort();
+		assertTrue(Arrays.equals(b.getData(), expect));
+
+		expect = new int[] { 1, 2, 3, 4, 5 };
+		data = new int[] { 2, 4, 3, 5, 1 };
+		b = new BubbleSort(data);
 		b.sort();
 		assertTrue(Arrays.equals(b.getData(), expect));
 	}
