@@ -30,9 +30,9 @@ public class BubbleSort {
 				if (data[j] > data[j + 1]) {
 					count++;
 					exchange = 1;
-					data[j]^=data[j+1];
-					data[j+1]^=data[j];
-					data[j]^=data[j+1];
+					data[j] ^= data[j + 1];
+					data[j + 1] ^= data[j];
+					data[j] ^= data[j + 1];
 				}
 			}
 			if (exchange == 0)

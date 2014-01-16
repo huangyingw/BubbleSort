@@ -3,7 +3,7 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="bubbleSortTest" name="bubbleSort">
+              as the first entry and export the buildfile again. --><project basedir="." default="BubbleSortTest" name="BubbleSort">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../../../../../../usr/lib/eclipse"/>
     <property name="junit.output.dir" value="junit"/>
@@ -14,7 +14,7 @@
         <pathelement location="../../../../../../../../usr/share/eclipse/dropins/jdt/plugins/org.junit_4.8.2.dist/junit.jar"/>
         <pathelement location="../../../../../../../../usr/share/eclipse/dropins/jdt/plugins/org.hamcrest.core_1.1.0.jar"/>
     </path>
-    <path id="bubbleSort.classpath">
+    <path id="BubbleSort.classpath">
         <pathelement location="bin"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
@@ -36,7 +36,7 @@
         <echo message="${ant.project.name}: ${ant.file}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="src"/>
-            <classpath refid="bubbleSort.classpath"/>
+            <classpath refid="BubbleSort.classpath"/>
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
@@ -53,17 +53,17 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="bubbleSort">
-        <java classname="bubbleSort" failonerror="true" fork="yes">
-            <classpath refid="bubbleSort.classpath"/>
+    <target name="BubbleSort">
+        <java classname="BubbleSort" failonerror="true" fork="yes">
+            <classpath refid="BubbleSort.classpath"/>
         </java>
     </target>
-    <target depends="build" name="bubbleSortTest">
+    <target depends="build" name="BubbleSortTest">
         <mkdir dir="${junit.output.dir}"/>
         <junit haltonfailure="yes" fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="bubbleSortTest" todir="${junit.output.dir}"/>
-            <classpath refid="bubbleSort.classpath"/>
+            <test name="BubbleSortTest" todir="${junit.output.dir}"/>
+            <classpath refid="BubbleSort.classpath"/>
         </junit>
     </target>
     <target name="junitreport">
