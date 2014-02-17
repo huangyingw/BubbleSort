@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
+@SuppressWarnings("deprecation")
 @RunWith(value = Parameterized.class)
 public class BubbleSortTest {
 	private static final Logger logger = Logger.getAnonymousLogger();
